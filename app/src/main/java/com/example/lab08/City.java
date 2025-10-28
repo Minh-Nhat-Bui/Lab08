@@ -14,6 +14,7 @@ public class City {
         return this.city;
     }
 
+    //Returns the province's name
     public String getProvinceName(){
         return this.province;
     }
