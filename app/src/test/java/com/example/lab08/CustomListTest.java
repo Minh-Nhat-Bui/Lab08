@@ -6,9 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 
 public class CustomListTest {
-    private ArrayList<City> mockCityList() {
-        ArrayList<City> cityList = new ArrayList<City>();
-        cityList.add(mockCity());
+    private CustomList mockCityList() {
+        CustomList cityList = new CustomList();
+        cityList.addCity(mockCity());
         return cityList;
     }
     private City mockCity() {
@@ -17,10 +17,10 @@ public class CustomListTest {
 
 
     void testHasCity(){
-        ArrayList<City> cityList = mockCityList();
+        CustomList cityList = mockCityList();
 
         City city = new City("Langley", "British Columbia");
-        cityList.add(city);
+        cityList.addCity(city);
 
         assertTrue(cityList.hasCity(city));
         assertFalse(cityList.hasCity(new City("Calgary", "Alberta")));
